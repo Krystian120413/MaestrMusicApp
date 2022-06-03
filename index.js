@@ -3,10 +3,18 @@ const fs = require('fs');
 const cors = require('cors');
 const app = express();
 app.use(cors())
+const songs = require('./data/songs.json')
+
+const axios = require('axios')
+const httpAdapter = require("axios/lib/adapters/http");
 
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
+})
+
+app.get('/example', (req, res) => {
+    res.json(songs)
 })
 
 app.get('/song', (req, res) => {
@@ -15,7 +23,9 @@ app.get('/song', (req, res) => {
         res.status(400).send("Requires Range Header")
     }
 
-    const songPath = 'assets/Motion_Trio-Happy_Band.mp3'
+    const song = songs[0];
+
+    const songPath = song.path
     const songSize = fs.statSync(songPath).size
 
     const CHUNK_SIZE = 10 ** 6  // 1MB
@@ -26,7 +36,7 @@ app.get('/song', (req, res) => {
 
     const headers = {
         "Content-Range": `bytes ${start}-${end}/${songSize}`,
-        "Accept-Ranges": "bytes",
+        "Accept-Ranges": "bytes",   
         "Content-Length": contentLength,
         "Content-Type": "audio/mpeg",
     }
@@ -38,9 +48,32 @@ app.get('/song', (req, res) => {
 
     songStream.pipe(res)
 
+    // axios.get(songPath, {
+    //     responseType: "stream",
+    //     adapter: httpAdapter,
+    //     "Content-Range": "bytes 16561-8065611",
+    // }).then(Response => {
+    //     const stream = Response.data;
 
+    //     res.set("content-type", "audio/mp3");
+    //     res.set("accept-ranges", "bytes");
+    //     res.set("content-length", Response.headers["content-length"]);
+    //     console.log(Response);
 
-    // res.sendFile('data/mockdata.js', { root: __dirname });
+    //     stream.on("data", (chunk) => {
+    //         res.write(chunk)
+    //     })
+
+    //     stream.on("error", (err) => {
+    //         res.sendStatus(404)
+    //     })
+
+    //     stream.on("end", () => {
+    //         res.end()
+    //     })
+    // }).catch((Err) => {
+    //     console.log(Err.message)
+    // })
 });
 
 
