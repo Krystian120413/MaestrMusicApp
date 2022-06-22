@@ -13,8 +13,11 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
 })
 
-app.get('/example', (req, res) => {
-    res.json(songs)
+app.get('/song-info', (req, res) => {
+    const song = songs[0];
+    const {posterPath, title, author} = song;
+
+    res.send({posterPath, title, author})
 })
 
 app.get('/song', (req, res) => {
