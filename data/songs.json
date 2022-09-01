@@ -4,13 +4,47 @@
         "title": "Happy Band",
         "author": "Motion Trio",
         "path": "assets/songs/Motion_Trio-Happy_Band.mp3",
-        "posterPath": "assets/posters/Motion_Trio-Happy_Band.png"
+        "posterPath": "assets/posters/motion-trio-happy-band-poster.jpg",
+        "genre": ""
     },
     {
         "id": 1,
         "title": "Ogórki małosolne",
         "author": "Zbigniew Wodecki & Renata Zarębska",
         "path": "assets/songs/Wodecki-Ogorki_malosolne.mp3",
-        "posterPath": "assets/posters/Wodecki-ogorki_malosolne.png"
+        "posterPath": "assets/posters/wodecki-zarebska-ogorki.jpg",
+        "genre": ""
+    },
+    {
+        "id": 2,
+        "title": "Banjo Fever",
+        "author":"Alexander Nakarada",
+        "path": "assets/songs/alexander-nakarada-banjo-fever.mp3",
+        "posterPath": "assets/posters/alexander-nakarada-banjo-fever.jpg",
+        "genre": ["folk", "comedy"]
+    },
+    {
+        "id": 3,
+        "title": "Space Floating",
+        "author":"FSM Team feat. < e s c p >",
+        "path": "assets/songs/fsm-team-escp-space-floating.mp3",
+        "posterPath": "assets/posters/fsm-team-escp-space-floating.jpg",
+        "genre": ["lo-fi", "chill-hop", "downtempo", "trip hop", "trap"]
+    },
+    {
+        "id": 4,
+        "title": "Technology",
+        "author":"2TECH-AUDIO",
+        "path": "assets/songs/2tech-audio-technology.mp3",
+        "posterPath": "assets/posters/2tech-audio-technology.jpg",
+        "genre": ["corporate", "chillstep"]
+    },
+    {
+        "id": 5,
+        "title": "Happy Summer",
+        "author":"Mixaund",
+        "path": "assets/songs/mixaund-happy-summer.mp3",
+        "posterPath": "assets/posters/mixaund-happy-summer.jpg",
+        "genre": ["corporate", "funky", "groove"]
     }
 ]

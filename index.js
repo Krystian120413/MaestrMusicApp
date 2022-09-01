@@ -7,7 +7,7 @@ const songs = require('./data/songs.json')
 
 const axios = require('axios')
 const httpAdapter = require("axios/lib/adapters/http");
-
+const path = require('path');
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
@@ -51,6 +51,27 @@ app.get('/songs/songInfo/:songInfoId', (req, res) => {
     const songInfoId = req.params.songInfoId < songs.length && req.params.songInfoId > 0 ? req.params.songInfoId : 0;
     const { title, author } = songs[songInfoId];
     res.json({ title, author });
+})
+
+app.get('/songs/songInfo/poster/:posterId', (req, res) => {
+    const posterId = req.params.posterId < songs.length && req.params.posterId > 0 ? req.params.posterId : 0;
+    const { posterPath } = songs[posterId];
+
+    const options = {
+        root: __dirname,
+        dotfiles: 'deny',
+        headers: {
+            'x-timestamp': Date.now(),
+            'x-sent': true,
+        }
+    };
+
+    
+    res.sendFile(posterPath, options, (error) => {
+        if(error) {
+            res.send(error.status)
+        }
+    });
 })
 
 
