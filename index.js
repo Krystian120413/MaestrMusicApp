@@ -63,10 +63,10 @@ app.get('/songs/songInfo/poster/:posterId', (req, res) => {
         headers: {
             'x-timestamp': Date.now(),
             'x-sent': true,
+            'Content-Type': 'image/png',
         }
     };
 
-    
     res.sendFile(posterPath, options, (error) => {
         if(error) {
             res.send(error.status)
