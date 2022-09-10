@@ -7,18 +7,18 @@ const songs = require('./data/songs.json');
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
-})
+});
 
 app.get('/songs', (req, res) => {
     res.json(songs);
-})
+});
 
 app.get('/songs/:songId', (req, res) => {
     const range = req.headers.range;
     const songId = req.params.songId < songs.length && req.params.songId > 0 ? req.params.songId : 0;
 
     if(!range){
-        res.status(400).send("Requires Range Header");
+        res.status(400).send('Requires Range Header');
     }
 
     const song = songs[songId];
@@ -27,17 +27,17 @@ app.get('/songs/:songId', (req, res) => {
     const songSize = fs.statSync(songPath).size;
 
     const CHUNK_SIZE = 10 ** 6;  // 1MB
-    const start = Number(range.replace(/\D/g, ""));
+    const start = Number(range.replace(/\D/g, ''));
     const end = Math.min(start + CHUNK_SIZE, songSize - 1);
 
     const contentLength = end - start + 1;
 
     const headers = {
-        "Content-Range": `bytes ${start}-${end}/${songSize}`,
-        "Accept-Ranges": "bytes",   
-        "Content-Length": contentLength,
-        "Content-Type": "audio/mpeg",
-    }
+        'Content-Range': `bytes ${start}-${end}/${songSize}`,
+        'Accept-Ranges': 'bytes',   
+        'Content-Length': contentLength,
+        'Content-Type': 'audio/mpeg',
+    };
 
     // HTTP Status 206 for Partial Content
     res.writeHead(206, headers);
