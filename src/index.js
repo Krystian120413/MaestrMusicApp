@@ -25,9 +25,8 @@ app.get('/songs/:songId', (req, res) => {
     }
 
     const song = songs[songId];
-    console.log(__dirname+song.posterPath);
 
-    const songPath = song.path;
+    const songPath = '/'+song.path;
     const songSize = fs.statSync(songPath).size;
 
     const CHUNK_SIZE = 10 ** 6;  // 1MB
