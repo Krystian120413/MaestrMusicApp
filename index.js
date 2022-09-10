@@ -2,49 +2,79 @@ const express = require('express');
 const fs = require('fs');
 const cors = require('cors');
 const app = express();
-app.use(cors())
-
+app.use(cors());
+const songs = require('./data/songs.json');
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html')
-})
+    res.sendFile(__dirname + '/index.html');
+});
 
-app.get('/song', (req, res) => {
-    const range = req.headers.range
+app.get('/songs', (req, res) => {
+    res.json(songs);
+});
+
+app.get('/songs/:songId', (req, res) => {
+    const range = req.headers.range;
+    const songId = req.params.songId < songs.length && req.params.songId > 0 ? req.params.songId : 0;
+
     if(!range){
-        res.status(400).send("Requires Range Header")
+        res.status(400).send('Requires Range Header');
     }
 
-    const songPath = 'assets/Motion_Trio-Happy_Band.mp3'
-    const songSize = fs.statSync(songPath).size
+    const song = songs[songId];
 
-    const CHUNK_SIZE = 10 ** 6  // 1MB
-    const start = Number(range.replace(/\D/g, ""))
-    const end = Math.min(start + CHUNK_SIZE, songSize - 1)
+    const songPath = song.path;
+    const songSize = fs.statSync(songPath).size;
 
-    const contentLength = end - start + 1
+    const CHUNK_SIZE = 10 ** 6;  // 1MB
+    const start = Number(range.replace(/\D/g, ''));
+    const end = Math.min(start + CHUNK_SIZE, songSize - 1);
+
+    const contentLength = end - start + 1;
 
     const headers = {
-        "Content-Range": `bytes ${start}-${end}/${songSize}`,
-        "Accept-Ranges": "bytes",
-        "Content-Length": contentLength,
-        "Content-Type": "audio/mpeg",
-    }
+        'Content-Range': `bytes ${start}-${end}/${songSize}`,
+        'Accept-Ranges': 'bytes',   
+        'Content-Length': contentLength,
+        'Content-Type': 'audio/mpeg',
+    };
 
     // HTTP Status 206 for Partial Content
-    res.writeHead(206, headers)
+    res.writeHead(206, headers);
 
-    const songStream = fs.createReadStream(songPath, { start, end })
+    const songStream = fs.createReadStream(songPath, { start, end });
 
-    songStream.pipe(res)
+    songStream.pipe(res);
+});
 
+app.get('/songs-info/:songInfoId', (req, res) => {
+    const songInfoId = req.params.songInfoId < songs.length && req.params.songInfoId > 0 ? req.params.songInfoId : 0;
+    const { title, author } = songs[songInfoId];
+    res.json({ title, author });
+});
 
+app.get('/songs-info/posters/:posterId', (req, res) => {
+    const posterId = req.params.posterId < songs.length && req.params.posterId > 0 ? req.params.posterId : 0;
+    const { posterPath } = songs[posterId];
 
-    // res.sendFile('data/mockdata.js', { root: __dirname });
+    const options = {
+        root: __dirname,
+        dotfiles: 'deny',
+        headers: {
+            'x-timestamp': Date.now(),
+            'x-sent': true,
+            'Content-Type': 'image/png',
+        }
+    };
+
+    res.sendFile(posterPath, options, (error) => {
+        if(error) {
+            res.send(error.status);
+        }
+    });
 });
 
 
 app.listen(5000, () => {
-    console.log('Listening on port 5000!')
+    console.log('Listening on port 5000!');
 });
-
