@@ -51,13 +51,13 @@ app.get('/songs/:songId', (req, res) => {
     songStream.pipe(res) 
 });
 
-app.get('/songs/songInfo/:songInfoId', (req, res) => {
+app.get('/songs-info/:songInfoId', (req, res) => {
     const songInfoId = req.params.songInfoId < songs.length && req.params.songInfoId > 0 ? req.params.songInfoId : 0;
     const { title, author } = songs[songInfoId];
     res.json({ title, author });
 })
 
-app.get('/songs/songInfo/poster/:posterId', (req, res) => {
+app.get('/songs-info/posters/:posterId', (req, res) => {
     const posterId = req.params.posterId < songs.length && req.params.posterId > 0 ? req.params.posterId : 0;
     const { posterPath } = songs[posterId];
 
