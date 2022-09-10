@@ -3,10 +3,13 @@ const fs = require('fs');
 const cors = require('cors');
 const app = express();
 app.use(cors());
-const songs = require('../data/songs.json');
+const songs = require('./data/songs.json');
+
+// const songs1 = require('routes/songs');
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
+    console.log(__dirname);
 });
 
 app.get('/songs', (req, res) => {
@@ -22,6 +25,7 @@ app.get('/songs/:songId', (req, res) => {
     }
 
     const song = songs[songId];
+    console.log(__dirname+song.posterPath);
 
     const songPath = song.path;
     const songSize = fs.statSync(songPath).size;
