@@ -3,7 +3,7 @@ const fs = require('fs');
 const cors = require('cors');
 const app = express();
 app.use(cors());
-const songs = require('./data/songs.json');
+const songs = require('../data/songs.json');
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
