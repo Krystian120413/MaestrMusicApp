@@ -11,9 +11,10 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
-app.get('/songs', (req, res) => {
-    res.json(songs);
-});
+// app.get('/songs', (req, res) => {
+//     res.json(songs);
+// });
+
 
 app.get('/songs/:songId', (req, res) => {
     const range = req.headers.range;
