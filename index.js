@@ -1,16 +1,48 @@
+require('dotenv').config();
+
 const express = require('express');
 const fs = require('fs');
 const cors = require('cors');
 const app = express();
 app.use(cors());
+const jwt = require('jsonwebtoken');
 const songs = require('./data/songs.json');
+
+app.use(express.json());
+
+//for test
+const posts = [
+    {
+        username: 'Admin',
+        title: 'post1'
+    },
+    {
+        username: 'nieAdmin',
+        title: 'post2'
+    }
+];
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
-app.get('/songs', (req, res) => {
+//for tests
+app.get('/posts', authenticateToken, (req, res) => {
+    res.json(posts.filter(post => post.username === req.user.name));
+});
+
+app.get('/songs', authenticateToken, (req, res) => {
     res.json(songs);
+});
+
+app.post('/login', (req, res) => {
+    //Authenticate User
+
+    const username = req.body.username;
+    const user = { name: username };
+
+    const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET);
+    res.json({ accessToken: accessToken });
 });
 
 app.get('/songs/:songId', (req, res) => {
@@ -73,6 +105,20 @@ app.get('/songs-info/posters/:posterId', (req, res) => {
         }
     });
 });
+
+function authenticateToken(req, res, next) {
+    const authHeader = req.headers['authorization'];
+    const token = authHeader && authHeader.split(' ')[1];
+
+    if (token == null) res.sendStatus(401);
+
+    jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
+        if (err) return res.sendStatus(403);
+
+        req.user = user;
+        next();
+    });
+}
 
 
 app.listen(5000, () => {

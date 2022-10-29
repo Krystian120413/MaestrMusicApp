@@ -1,0 +1,33 @@
+GET http://localhost:5000/songs
+
+###
+
+GET http://localhost:5000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2NjcwODEwNDIsImV4cCI6MTY2NzA4MTA3Mn0.W9bb3FTS9TDlXUponohB3SDMPdXolsP8S8MuAjUorTs
+
+###
+
+DELETE http://localhost:6000/logout
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2NjcwODA5OTB9.c3x1ow5-uk6rg25fKde1-PEQSGIy6LHXiYcGwY6JEVM"
+}
+
+###
+
+POST http://localhost:6000/token
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2NjcwODA5OTB9.c3x1ow5-uk6rg25fKde1-PEQSGIy6LHXiYcGwY6JEVM"
+}
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin"
+}
