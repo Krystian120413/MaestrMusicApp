@@ -1,0 +1,166 @@
+GET http://localhost:5000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2Njc0MjE2MjUsImV4cCI6MTY2NzQyMjgyNX0.bGUm73AU4rJUw-XJ0cASMTygX1ZPHzLDxn6cVE9K-Hw
+
+<> 2022-11-02T214042.200.json
+
+###
+
+POST http://localhost:6000/token
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2Njc0MjE2MDV9.IBZMtOwPm_szTiDRErq1HSD7cLRR6-3AZtAWwYqIhkU"
+}
+
+<> 2022-11-02T214025.200.json
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin"
+}
+
+<> 2022-11-02T214005.200.json
+
+###
+
+POST http://localhost:6000/token
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2Njc0MjE1NDYsImV4cCI6MTY2NzQyMjc0Nn0.xlUq1O6AgOKfxVYKOxq0zhjBGz82zLvlYZohco8yRHo"
+}
+
+<> 2022-11-02T214002.403.txt
+
+###
+
+POST http://localhost:6000/token
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2Njc0MTk3MTd9.Y8E4ZQBO3Fj-ahTVJ7ZkTbIfJGZM8DOl9TqfCfd3xYc"
+}
+
+<> 2022-11-02T213922.403.txt
+
+###
+
+GET http://localhost:5000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2NjcwODEwNDIsImV4cCI6MTY2NzA4MTA3Mn0.W9bb3FTS9TDlXUponohB3SDMPdXolsP8S8MuAjUorTs
+
+<> 2022-11-02T213914.403.txt
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin"
+}
+
+<> 2022-11-02T213906.200.json
+
+###
+
+DELETE http://localhost:6000/logout
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2NjcwODA5OTB9.c3x1ow5-uk6rg25fKde1-PEQSGIy6LHXiYcGwY6JEVM"
+}
+
+###
+
+POST http://localhost:6000/token
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2Njc0MTk3MTd9.Y8E4ZQBO3Fj-ahTVJ7ZkTbIfJGZM8DOl9TqfCfd3xYc"
+}
+
+<> 2022-11-02T211024.200.json
+
+###
+
+POST http://localhost:6000/token
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2Njc0MTk3MTd9.Y8E4ZQBO3Fj-ahTVJ7ZkTbIfJGZM8DOl9TqfCfd3xYc"
+}
+
+<> 2022-11-02T210923.200.json
+
+###
+
+POST http://localhost:6000/token
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2Njc0MTk3MTcsImV4cCI6MTY2NzQyMDkxN30.IfK2T-SqfodAWxDdQKnrWow1sSZOyqTJo8q_OejfTCM"
+}
+
+<> 2022-11-02T210907.403.txt
+
+###
+
+POST http://localhost:6000/token
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2NjcwODA5OTB9.c3x1ow5-uk6rg25fKde1-PEQSGIy6LHXiYcGwY6JEVM"
+}
+
+<> 2022-11-02T210845.403.txt
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin"
+}
+
+<> 2022-11-02T210837.200.json
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin"
+}
+
+<> 2022-11-02T210527.500.html
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin"
+}
+
+<> 2022-11-02T210518.500.html
+
+###
+
+POST http://localhost:6000/token
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2NjcwODA5OTB9.c3x1ow5-uk6rg25fKde1-PEQSGIy6LHXiYcGwY6JEVM"
+}
+
+<> 2022-11-02T210516.403.txt
+
+###
+
