@@ -1,5 +1,7 @@
 require('dotenv').config();
 
+const db = require('./query');
+
 const express = require('express');
 const app = express();
 const jwt = require('jsonwebtoken');
@@ -9,16 +11,24 @@ app.use(express.json());
 //stored in database
 let refreshTokens = [];
 
-app.post('/login', (req, res) => {
+app.post('/login',  async (req, res) => {
     //Authenticate User
 
     const username = req.body.username;
-    const user = { name: username };
+    const password = req.body.password;
+    const id = await db.getUserId(username, password);
 
-    const accessToken = generateAccessToken(user);
-    const refreshToken = jwt.sign(user, process.env.REFRESH_TOKEN_SECRET);
-    refreshTokens.push(refreshToken);
-    res.json({ accessToken: accessToken, refreshToken: refreshToken });
+    if(id) {
+        const user = {name: username, password: password, id: id};
+
+        const accessToken = generateAccessToken(user);
+        const refreshToken = jwt.sign(user, process.env.REFRESH_TOKEN_SECRET);
+        refreshTokens.push(refreshToken);
+        res.json({ accessToken: accessToken, refreshToken: refreshToken });
+    }
+    else {
+        res.sendStatus(403);
+    }
 });
 
 app.post('/token', ((req, res) => {

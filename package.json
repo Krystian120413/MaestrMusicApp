@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js",
-    "startAuthServer": "nodemon authServer.js"
+    "startAuth": "nodemon authServer.js"
   },
   "keywords": [],
   "author": "Krystian Zbyrad <Krystian12053@gmail.com>",
@@ -17,6 +17,8 @@
     "express": "^4.18.1",
     "jsonwebtoken": "^8.5.1",
     "nodemon": "^2.0.16",
+    "pg": "^8.8.0",
+    "pg-promise": "^10.12.1",
     "prettier": "^2.7.1"
   },
   "repository": "git@github.com:Krystian120413/Maestr2-backend.git",

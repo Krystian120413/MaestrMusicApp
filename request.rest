@@ -3,7 +3,7 @@ GET http://localhost:5000/songs
 ###
 
 GET http://localhost:5000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2Njc0MjE2MjUsImV4cCI6MTY2NzQyMjgyNX0.bGUm73AU4rJUw-XJ0cASMTygX1ZPHzLDxn6cVE9K-Hw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2Njc1MTU0MTUsImV4cCI6MTY2NzUxNjYxNX0.NU2xIq8u-UAmz11SAYxdc5q3oEFMUwLLgl0imVj5BNA
 
 ###
 
@@ -29,5 +29,6 @@ POST http://localhost:6000/login
 Content-Type: application/json
 
 {
-  "username": "Admin"
+  "username": "Admin",
+  "password": "admin"
 }

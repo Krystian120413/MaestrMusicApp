@@ -1,18 +1,12 @@
-GET http://localhost:5000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2Njc0MjE2MjUsImV4cCI6MTY2NzQyMjgyNX0.bGUm73AU4rJUw-XJ0cASMTygX1ZPHzLDxn6cVE9K-Hw
-
-<> 2022-11-02T214042.200.json
-
-###
-
-POST http://localhost:6000/token
+POST http://localhost:6000/login
 Content-Type: application/json
 
 {
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2Njc0MjE2MDV9.IBZMtOwPm_szTiDRErq1HSD7cLRR6-3AZtAWwYqIhkU"
+  "username": "tirex@wp.pl",
+  "password": "ag123!@#"
 }
 
-<> 2022-11-02T214025.200.json
+<> 2022-11-04T011030.200.json
 
 ###
 
@@ -20,39 +14,11 @@ POST http://localhost:6000/login
 Content-Type: application/json
 
 {
-  "username": "Admin"
+  "username": "tirex@wp.pl",
+  "password": "admin"
 }
 
-<> 2022-11-02T214005.200.json
-
-###
-
-POST http://localhost:6000/token
-Content-Type: application/json
-
-{
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2Njc0MjE1NDYsImV4cCI6MTY2NzQyMjc0Nn0.xlUq1O6AgOKfxVYKOxq0zhjBGz82zLvlYZohco8yRHo"
-}
-
-<> 2022-11-02T214002.403.txt
-
-###
-
-POST http://localhost:6000/token
-Content-Type: application/json
-
-{
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2Njc0MTk3MTd9.Y8E4ZQBO3Fj-ahTVJ7ZkTbIfJGZM8DOl9TqfCfd3xYc"
-}
-
-<> 2022-11-02T213922.403.txt
-
-###
-
-GET http://localhost:5000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2NjcwODEwNDIsImV4cCI6MTY2NzA4MTA3Mn0.W9bb3FTS9TDlXUponohB3SDMPdXolsP8S8MuAjUorTs
-
-<> 2022-11-02T213914.403.txt
+<> 2022-11-04T011019.403.txt
 
 ###
 
@@ -60,63 +26,11 @@ POST http://localhost:6000/login
 Content-Type: application/json
 
 {
-  "username": "Admin"
+  "username": "Admin",
+  "password": "admin"
 }
 
-<> 2022-11-02T213906.200.json
-
-###
-
-DELETE http://localhost:6000/logout
-Content-Type: application/json
-
-{
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2NjcwODA5OTB9.c3x1ow5-uk6rg25fKde1-PEQSGIy6LHXiYcGwY6JEVM"
-}
-
-###
-
-POST http://localhost:6000/token
-Content-Type: application/json
-
-{
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2Njc0MTk3MTd9.Y8E4ZQBO3Fj-ahTVJ7ZkTbIfJGZM8DOl9TqfCfd3xYc"
-}
-
-<> 2022-11-02T211024.200.json
-
-###
-
-POST http://localhost:6000/token
-Content-Type: application/json
-
-{
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2Njc0MTk3MTd9.Y8E4ZQBO3Fj-ahTVJ7ZkTbIfJGZM8DOl9TqfCfd3xYc"
-}
-
-<> 2022-11-02T210923.200.json
-
-###
-
-POST http://localhost:6000/token
-Content-Type: application/json
-
-{
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2Njc0MTk3MTcsImV4cCI6MTY2NzQyMDkxN30.IfK2T-SqfodAWxDdQKnrWow1sSZOyqTJo8q_OejfTCM"
-}
-
-<> 2022-11-02T210907.403.txt
-
-###
-
-POST http://localhost:6000/token
-Content-Type: application/json
-
-{
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2NjcwODA5OTB9.c3x1ow5-uk6rg25fKde1-PEQSGIy6LHXiYcGwY6JEVM"
-}
-
-<> 2022-11-02T210845.403.txt
+<> 2022-11-04T010858.200.json
 
 ###
 
@@ -124,10 +38,11 @@ POST http://localhost:6000/login
 Content-Type: application/json
 
 {
-  "username": "Admin"
+  "username": "Admin",
+  "password": "admin"
 }
 
-<> 2022-11-02T210837.200.json
+<> 2022-11-04T010739.200.json
 
 ###
 
@@ -135,10 +50,11 @@ POST http://localhost:6000/login
 Content-Type: application/json
 
 {
-  "username": "Admin"
+  "username": "Admxin",
+  "password": "admcin"
 }
 
-<> 2022-11-02T210527.500.html
+<> 2022-11-04T010734.403.txt
 
 ###
 
@@ -146,21 +62,539 @@ POST http://localhost:6000/login
 Content-Type: application/json
 
 {
-  "username": "Admin"
+  "username": "Admxin",
+  "password": "admin"
 }
 
-<> 2022-11-02T210518.500.html
+<> 2022-11-04T010731.403.txt
 
 ###
 
-POST http://localhost:6000/token
+POST http://localhost:6000/login
 Content-Type: application/json
 
 {
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2NjcwODA5OTB9.c3x1ow5-uk6rg25fKde1-PEQSGIy6LHXiYcGwY6JEVM"
+  "username": "Admin",
+  "password": "asdmin"
 }
 
-<> 2022-11-02T210516.403.txt
+<> 2022-11-04T010727.403.txt
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T010720.200.json
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Adsdmin",
+  "password": "admin"
+}
+
+<> 2022-11-04T010505.403.txt
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T010501.200.json
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "adasdmin"
+}
+
+<> 2022-11-04T010457.403.txt
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "adasdmin"
+}
+
+<> 2022-11-04T010451.403.txt
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "adasdmin"
+}
+
+<> 2022-11-04T010352.200.json
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T010348.200.json
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "addmin"
+}
+
+<> 2022-11-04T010337.200.json
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T010254.200.json
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T005908.200.json
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T005259.403.txt
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T005210.403.txt
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T005141.403.txt
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T005120.403.txt
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T005107.403.txt
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T005052.403.txt
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T004653.200.json
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T004648.200.json
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T004615.200.json
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T004600.200.json
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T004447.200.json
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T004247.200.json
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T004231.200.json
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T004201.200.json
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T004116.200.json
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "amin"
+}
+
+<> 2022-11-04T004105.200.json
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T004057.200.json
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T004007.200.json
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "amin"
+}
+
+<> 2022-11-04T003917.200.json
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T003914.200.json
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T003846.200.json
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T003810.403.txt
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T003746.403.txt
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T003713.403.txt
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T003701.405.txt
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T003654.402.txt
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T003642.400.txt
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T003624.401.txt
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T003601.403.txt
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "amin"
+}
+
+<> 2022-11-04T003558.403.txt
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T003553.403.txt
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T003548.403.txt
+
+###
+
+POST http://localhost:6000/login
+Content-Type: application/json
+
+{
+  "username": "Admin",
+  "password": "admin"
+}
+
+<> 2022-11-04T003015.200.json
 
 ###
 
