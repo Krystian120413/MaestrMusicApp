@@ -11,6 +11,23 @@ app.use(express.json());
 //stored in database
 let refreshTokens = [];
 
+//not working properly
+app.post('/signup', async (req, res) => {
+    const body = req.body;
+
+    if(!(body.username && body.password)){
+        return res.status(400).send({ error: 'Data not formatted properly' });
+    }
+
+    const isUserSaved = await db.postUserToDatabase(body.username, body.password, body.name);
+    if (isUserSaved){
+        res.sendStatus(201);
+    }
+    else {
+        res.sendStatus(403);
+    }
+});
+
 app.post('/login',  async (req, res) => {
     //Authenticate User
 

@@ -1,4 +1,5 @@
 GET http://localhost:5000/songs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJwYXNzd29yZCI6ImFkbWluIiwiaWQiOjEsImlhdCI6MTY2NzYwOTczNCwiZXhwIjoxNjY3NjEwOTM0fQ.R9xW_VPS5rFR78AJnG4lsLEcVml07kReOt9zeI4txZY
 
 ###
 
@@ -31,4 +32,15 @@ Content-Type: application/json
 {
   "username": "Admin",
   "password": "admin"
+}
+
+###
+
+POST http://localhost:6000/signup
+Content-Type: application/json
+
+{
+  "username": "Marek",
+  "password": "arek123!",
+  "name": "Arek Arkowski"
 }
