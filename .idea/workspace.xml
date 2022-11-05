@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c706a51-00e3-4176-8a53-5c66cca55be0" name="Changes" comment="bcrypt using functions are in crypt.js file, now">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+    <list default="true" id="8c706a51-00e3-4176-8a53-5c66cca55be0" name="Changes" comment="updated .rest file">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/request.rest" beforeDir="false" afterPath="$PROJECT_DIR$/request.rest" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +80,8 @@
       <workItem from="1667417603719" duration="4010000" />
       <workItem from="1667504472479" duration="1202000" />
       <workItem from="1667514866338" duration="7627000" />
-      <workItem from="1667601937970" duration="9526000" />
+      <workItem from="1667601937970" duration="9550000" />
+      <workItem from="1667613651803" duration="15000" />
     </task>
     <task id="LOCAL-00001" summary="login generate token only for users from database">
       <created>1667521171977</created>
@@ -104,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667613180360</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="updated .rest file">
+      <created>1667613549346</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667613549346</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +132,7 @@
     <MESSAGE value="login generate token only for users from database" />
     <MESSAGE value="user can singup and login, hash working" />
     <MESSAGE value="bcrypt using functions are in crypt.js file, now" />
-    <option name="LAST_COMMIT_MESSAGE" value="bcrypt using functions are in crypt.js file, now" />
+    <MESSAGE value="updated .rest file" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated .rest file" />
   </component>
 </project>
