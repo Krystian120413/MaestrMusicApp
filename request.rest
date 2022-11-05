@@ -40,7 +40,7 @@ POST http://localhost:6000/signup
 Content-Type: application/json
 
 {
-  "username": "Marek",
+  "username": "Maaaarek",
   "password": "arek123!",
   "name": "Arek Arkowski"
 }

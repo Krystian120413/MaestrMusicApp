@@ -9,7 +9,7 @@ const pool = new Pool({
     port: 5432,
 });
 
-const bcrypt = require('bcrypt');
+const crypt = require('./crypt');
 
 const getPasswordAndCompare = (username, password) => {
     return new Promise(resolve => {
@@ -18,7 +18,7 @@ const getPasswordAndCompare = (username, password) => {
                 throw err;
             }
             if (res.rows[0]){
-                const isValid = await bcrypt.compare(password, res.rows[0].password);
+                const isValid = await crypt.comparePasswords(password, res.rows[0].password);
                 resolve(isValid);
             }
             else {
@@ -47,7 +47,7 @@ const checkUserInDatabase = (username) => {
 const postUserToDatabase = async (username, password, name) => {
     const existInDatabase = await checkUserInDatabase(username);
     if(!existInDatabase) {
-        const hashedPassword = await bcrypt.hash(password, 10);
+        const hashedPassword = await crypt.hashPassword(password);
 
         return new Promise(resolve => {
             pool.query('insert into public."Users"("email", "password", "name") values ($1, $2, $3)', [username, hashedPassword, name], (error) => {
