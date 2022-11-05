@@ -1,12 +1,12 @@
 GET http://localhost:5000/songs
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJwYXNzd29yZCI6ImFkbWluIiwiaWQiOjEsImlhdCI6MTY2NzYwOTczNCwiZXhwIjoxNjY3NjEwOTM0fQ.R9xW_VPS5rFR78AJnG4lsLEcVml07kReOt9zeI4txZY
 
-###
+### posts
 
 GET http://localhost:5000/posts
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2Njc1MTU0MTUsImV4cCI6MTY2NzUxNjYxNX0.NU2xIq8u-UAmz11SAYxdc5q3oEFMUwLLgl0imVj5BNA
 
-###
+### logout
 
 DELETE http://localhost:6000/logout
 Content-Type: application/json
@@ -15,7 +15,7 @@ Content-Type: application/json
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2NjcwODA5OTB9.c3x1ow5-uk6rg25fKde1-PEQSGIy6LHXiYcGwY6JEVM"
 }
 
-###
+### token
 
 POST http://localhost:6000/token
 Content-Type: application/json
@@ -24,7 +24,7 @@ Content-Type: application/json
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2Njc0MjE2MDV9.IBZMtOwPm_szTiDRErq1HSD7cLRR6-3AZtAWwYqIhkU"
 }
 
-###
+### login
 
 POST http://localhost:6000/login
 Content-Type: application/json
@@ -34,13 +34,13 @@ Content-Type: application/json
   "password": "admin"
 }
 
-###
+### signup
 
 POST http://localhost:6000/signup
 Content-Type: application/json
 
 {
-  "username": "Maaaarek",
-  "password": "arek123!",
+  "username": "Maasarek",
+  "password": "aarsek123!",
   "name": "Arek Arkowski"
 }
