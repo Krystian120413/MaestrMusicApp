@@ -5,31 +5,16 @@ const express = require('express');
 const fs = require('fs');
 const cors = require('cors');
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: '*'
+}));
 const jwt = require('jsonwebtoken');
 const songs = require('./data/songs.json');
 
 app.use(express.json());
 
-//for test
-const posts = [
-    {
-        username: 'Admin',
-        title: 'post1'
-    },
-    {
-        username: 'nieAdmin',
-        title: 'post2'
-    }
-];
-
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
-});
-
-//for tests
-app.get('/posts', authenticateToken, (req, res) => {
-    res.json(posts.filter(post => post.username === req.user.name));
 });
 
 app.get('/songs', authenticateToken, (req, res) => {

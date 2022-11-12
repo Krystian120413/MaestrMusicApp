@@ -1,14 +1,13 @@
 GET http://localhost:5000/songs
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJwYXNzd29yZCI6ImFkbWluIiwiaWQiOjEsImlhdCI6MTY2NzYwOTczNCwiZXhwIjoxNjY3NjEwOTM0fQ.R9xW_VPS5rFR78AJnG4lsLEcVml07kReOt9zeI4txZY
 
-### posts
+### test
 
-GET http://localhost:5000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2Njc1MTU0MTUsImV4cCI6MTY2NzUxNjYxNX0.NU2xIq8u-UAmz11SAYxdc5q3oEFMUwLLgl0imVj5BNA
+GET http://localhost:5010/dupa
 
 ### logout
 
-DELETE http://localhost:6000/logout
+DELETE http://localhost:5010/logout
 Content-Type: application/json
 
 {
@@ -17,7 +16,7 @@ Content-Type: application/json
 
 ### token
 
-POST http://localhost:6000/token
+POST http://localhost:5010/token
 Content-Type: application/json
 
 {
@@ -26,12 +25,12 @@ Content-Type: application/json
 
 ### login
 
-POST http://localhost:6000/login
+POST http://localhost:5010/login
 Content-Type: application/json
 
 {
-  "username": "Admin",
-  "password": "admin"
+  "username": "admin@email.com",
+  "password": "admin123!"
 }
 
 ### signup
@@ -40,7 +39,7 @@ POST http://localhost:6000/signup
 Content-Type: application/json
 
 {
-  "username": "Maasarek",
-  "password": "aarsek123!",
-  "name": "Arek Arkowski"
+  "username": "admin@email.com",
+  "password": "admin123!",
+  "name": "Admin Admiński"
 }

@@ -62,17 +62,17 @@ const postUserToDatabase = async (username, password, name) => {
     }
 };
 
-const getUserId = async (username, password) => {
+const getUserIdAndName = async (username, password) => {
     const isPasswordValid = await getPasswordAndCompare(username, password);
 
     return new Promise(resolve => {
         if(isPasswordValid){
-            pool.query('select "userId" from public."Users" where "email" = $1', [username], (error, result) => {
+            pool.query('select "userId", "name" from public."Users" where "email" = $1', [username], (error, result) => {
                 if (error) {
                     throw error;
                 }
                 if(result.rows[0]){
-                    resolve(result.rows[0].userId);
+                    resolve(result.rows[0]);
                 }
                 else {
                     resolve(null);
@@ -86,6 +86,6 @@ const getUserId = async (username, password) => {
 };
 
 module.exports = {
-    getUserId,
+    getUserIdAndName,
     postUserToDatabase
 };

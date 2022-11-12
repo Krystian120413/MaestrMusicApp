@@ -4,14 +4,17 @@ const db = require('./query');
 
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const jwt = require('jsonwebtoken');
 
+app.use(cors({
+    origin: '*'
+}));
 app.use(express.json());
 
 //stored in database
 let refreshTokens = [];
 
-//not working properly
 app.post('/signup', async (req, res) => {
     const body = req.body;
 
@@ -33,15 +36,15 @@ app.post('/login',  async (req, res) => {
 
     const username = req.body.username;
     const password = req.body.password;
-    const id = await db.getUserId(username, password);
+    const idAndName = await db.getUserIdAndName(username, password);
 
-    if(id) {
-        const user = {name: username, password: password, id: id};
+    if(idAndName) {
+        const user = {name: username, password: password, idAndName: idAndName};
 
         const accessToken = generateAccessToken(user);
         const refreshToken = jwt.sign(user, process.env.REFRESH_TOKEN_SECRET);
         refreshTokens.push(refreshToken);
-        res.json({ accessToken: accessToken, refreshToken: refreshToken });
+        res.json({ accessToken: accessToken, refreshToken: refreshToken, name: idAndName.name, userId: idAndName.userId });
     }
     else {
         res.sendStatus(403);
@@ -71,6 +74,6 @@ function generateAccessToken(user) {
     return  jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '20m' });
 }
 
-app.listen(6000, () => {
-    console.log('Listening on port 6000!');
+app.listen(5010, () => {
+    console.log('Listening on port 5010!');
 });
