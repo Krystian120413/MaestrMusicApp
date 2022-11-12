@@ -1,15 +1,23 @@
+require('dotenv').config();
+
+//server
 const express = require('express');
 const fs = require('fs');
 const cors = require('cors');
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: '*'
+}));
+const jwt = require('jsonwebtoken');
 const songs = require('./data/songs.json');
+
+app.use(express.json());
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
-app.get('/songs', (req, res) => {
+app.get('/songs', authenticateToken, (req, res) => {
     res.json(songs);
 });
 
@@ -73,6 +81,20 @@ app.get('/songs-info/posters/:posterId', (req, res) => {
         }
     });
 });
+
+function authenticateToken(req, res, next) {
+    const authHeader = req.headers['authorization'];
+    const token = authHeader && authHeader.split(' ')[1];
+
+    if (token == null) res.sendStatus(401);
+
+    jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
+        if (err) return res.sendStatus(403);
+
+        req.user = user;
+        next();
+    });
+}
 
 
 app.listen(5000, () => {
