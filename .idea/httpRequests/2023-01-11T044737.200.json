@@ -1,0 +1,19 @@
+{
+  "keyword": [
+    {
+      "songId": 2,
+      "keywordId": 1,
+      "name": "happy_band"
+    },
+    {
+      "songId": 2,
+      "keywordId": 2,
+      "name": "folk"
+    },
+    {
+      "songId": 2,
+      "keywordId": 4,
+      "name": "classical"
+    }
+  ]
+}

@@ -65,8 +65,10 @@ app.post('/token', ((req, res) => {
     });
 }));
 
-app.delete('/logout', (req, res) => {
+app.delete('/logout', async (req, res) => {
     refreshTokens = refreshTokens.filter(token => token !== req.body.token);
+    const userId = req.body.userId;
+    await db.deleteActualPlayedSong(userId);
     res.sendStatus(204);
 });
 

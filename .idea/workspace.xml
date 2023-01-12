@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c706a51-00e3-4176-8a53-5c66cca55be0" name="Changes" comment="updated .rest file">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="8c706a51-00e3-4176-8a53-5c66cca55be0" name="Changes" comment="ended login with token and hash">
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/authServer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/songs.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/songs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/query.js" beforeDir="false" afterPath="$PROJECT_DIR$/query.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/request.rest" beforeDir="false" afterPath="$PROJECT_DIR$/request.rest" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,29 +46,29 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="HTTP Request.request | signup">
-    <configuration name="request | login" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/request.rest" index="5" requestIdentifier="login" runType="Run single request">
+  <component name="RunManager" selected="HTTP Request.request | user-playlists">
+    <configuration name="request | new-playlist" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/request.rest" index="5" requestIdentifier="new-playlist" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="request | logout" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/request.rest" index="3" requestIdentifier="logout" runType="Run single request">
+    <configuration name="request | radio-listened-song-id" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/request.rest" index="17" requestIdentifier="radio-listened-song-id" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="request | posts" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/request.rest" index="2" requestIdentifier="posts" runType="Run single request">
+    <configuration name="request | recommended-songs" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/request.rest" index="16" requestIdentifier="recommended-songs" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="request | signup" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/request.rest" index="6" requestIdentifier="signup" runType="Run single request">
+    <configuration name="request | songs-in-playlist" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/request.rest" index="9" requestIdentifier="songs-in-playlist" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="request | token" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/request.rest" index="4" requestIdentifier="token" runType="Run single request">
+    <configuration name="request | user-playlists" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/request.rest" index="4" requestIdentifier="user-playlists" runType="Run single request">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.request | signup" />
-        <item itemvalue="HTTP Request.request | token" />
-        <item itemvalue="HTTP Request.request | login" />
-        <item itemvalue="HTTP Request.request | logout" />
-        <item itemvalue="HTTP Request.request | posts" />
+        <item itemvalue="HTTP Request.request | user-playlists" />
+        <item itemvalue="HTTP Request.request | recommended-songs" />
+        <item itemvalue="HTTP Request.request | songs-in-playlist" />
+        <item itemvalue="HTTP Request.request | radio-listened-song-id" />
+        <item itemvalue="HTTP Request.request | new-playlist" />
       </list>
     </recent_temporary>
   </component>
@@ -82,6 +88,34 @@
       <workItem from="1667514866338" duration="7627000" />
       <workItem from="1667601937970" duration="9550000" />
       <workItem from="1667613651803" duration="15000" />
+      <workItem from="1668455461921" duration="4528000" />
+      <workItem from="1668511582934" duration="2756000" />
+      <workItem from="1668516285268" duration="291000" />
+      <workItem from="1668516595133" duration="264000" />
+      <workItem from="1668522299433" duration="764000" />
+      <workItem from="1668858210633" duration="5908000" />
+      <workItem from="1668968357570" duration="3415000" />
+      <workItem from="1669245066999" duration="931000" />
+      <workItem from="1669311193372" duration="3890000" />
+      <workItem from="1669328205014" duration="9495000" />
+      <workItem from="1669385181140" duration="3144000" />
+      <workItem from="1669636074200" duration="36000" />
+      <workItem from="1671100182647" duration="1386000" />
+      <workItem from="1671124631163" duration="6000" />
+      <workItem from="1671134946853" duration="4558000" />
+      <workItem from="1671212802274" duration="1197000" />
+      <workItem from="1671440537293" duration="875000" />
+      <workItem from="1671458345800" duration="608000" />
+      <workItem from="1671474853106" duration="71000" />
+      <workItem from="1671532813890" duration="724000" />
+      <workItem from="1672231462636" duration="1454000" />
+      <workItem from="1672657340888" duration="259000" />
+      <workItem from="1672658793407" duration="31000" />
+      <workItem from="1672658870774" duration="8000" />
+      <workItem from="1672659157642" duration="49000" />
+      <workItem from="1673341015984" duration="19230000" />
+      <workItem from="1673403850142" duration="7349000" />
+      <workItem from="1673440011970" duration="5350000" />
     </task>
     <task id="LOCAL-00001" summary="login generate token only for users from database">
       <created>1667521171977</created>

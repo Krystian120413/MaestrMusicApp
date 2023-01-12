@@ -1,9 +1,62 @@
+### songs
+
 GET http://localhost:5000/songs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJwYXNzd29yZCI6ImFkbWluIiwiaWQiOjEsImlhdCI6MTY2NzYwOTczNCwiZXhwIjoxNjY3NjEwOTM0fQ.R9xW_VPS5rFR78AJnG4lsLEcVml07kReOt9zeI4txZY
+
+### songs-info
+
+GET http://localhost:5000/songs-info/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJwYXNzd29yZCI6ImFkbWluIiwiaWQiOjEsImlhdCI6MTY2NzYwOTczNCwiZXhwIjoxNjY3NjEwOTM0fQ.R9xW_VPS5rFR78AJnG4lsLEcVml07kReOt9zeI4txZY
 
 ### test
 
-GET http://localhost:5010/dupa
+GET http://localhost:5000/test
+
+### user-playlists
+
+GET http://localhost:5000/playlists/users/13
+
+### new-playlist
+
+POST http://localhost:5000/playlists
+Content-Type: application/json
+
+{
+  "userId": 11,
+  "playlistName": "NowaPlaylista"
+}
+
+### delete-playlist
+
+DELETE http://localhost:5000/playlists/7
+
+### new-song-in-playlist
+
+POST http://localhost:5000/playlist/song
+Content-Type: application/json
+
+{
+  "playlistId": 7,
+  "songId": 2
+}
+
+### delete-song-from-playlist
+
+DELETE http://localhost:5000/playlist/song
+Content-Type: application/json
+
+{
+  "playlistId": 2,
+  "songId": 2
+}
+
+### songs-in-playlist
+
+GET http://localhost:5000/playlists/1
+
+### song-listened-by-user
+
+GET http://localhost:5000/radio/22
 
 ### logout
 
@@ -11,6 +64,7 @@ DELETE http://localhost:5010/logout
 Content-Type: application/json
 
 {
+  "userId": 2,
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2NjcwODA5OTB9.c3x1ow5-uk6rg25fKde1-PEQSGIy6LHXiYcGwY6JEVM"
 }
 
@@ -35,11 +89,33 @@ Content-Type: application/json
 
 ### signup
 
-POST http://localhost:6000/signup
+POST http://localhost:5010/signup
 Content-Type: application/json
 
 {
-  "username": "admin@email.com",
+  "username": "aadmin@email.com",
   "password": "admin123!",
   "name": "Admin Admiński"
 }
+
+### post-new-user-data
+
+POST http://localhost:5000/user/20
+Content-Type: application/json
+
+{
+  "userName": "Mariusz Mlanący"
+}
+
+### recommended-songs
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+### radio-listened-song-id
+
+GET http://localhost:5000/radio/2

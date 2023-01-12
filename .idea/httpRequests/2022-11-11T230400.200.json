@@ -1,0 +1,6 @@
+{
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJwYXNzd29yZCI6ImFkbWluIiwiaWQiOjEsImlhdCI6MTY2ODIwNDI0MCwiZXhwIjoxNjY4MjA1NDQwfQ.TGOO0FuJHKlIUksQVmdCqOZsIcMuVehTQgYG9iUJj28",
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJwYXNzd29yZCI6ImFkbWluIiwiaWQiOjEsImlhdCI6MTY2ODIwNDI0MH0.GqjYwvEej2oGKWhUJqpMIG9Cj3G4KZqStzuJKylFmQM",
+  "name": "Admin",
+  "userId": 1
+}

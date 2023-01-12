@@ -1,0 +1,29 @@
+{
+  "name": "moja playlista",
+  "songs": [
+    {
+      "songId": 2,
+      "title": "Happy Band",
+      "author": "Motion Trio",
+      "duration": 250,
+      "path": "assets/songs/Motion_Trio-Happy_Band.mp3",
+      "posterPath": "assets/posters/motion-trio-happy-band-poster.jpg"
+    },
+    {
+      "songId": 2,
+      "title": "Happy Band",
+      "author": "Motion Trio",
+      "duration": 250,
+      "path": "assets/songs/Motion_Trio-Happy_Band.mp3",
+      "posterPath": "assets/posters/motion-trio-happy-band-poster.jpg"
+    },
+    {
+      "songId": 3,
+      "title": "Banjo Fever",
+      "author": "Alexander Nakarada",
+      "duration": 151,
+      "path": "assets/songs/alexander-nakarada-banjo-fever.mp3",
+      "posterPath": "assets/posters/alexander-nakarada-banjo-fever.jpg"
+    }
+  ]
+}

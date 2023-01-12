@@ -1,0 +1,6 @@
+{
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW5AZW1haWwuY29tIiwicGFzc3dvcmQiOiJhZG1pbjEyMyEiLCJpZCI6MjEsImlhdCI6MTY2ODIxMjY1NCwiZXhwIjoxNjY4MjEzODU0fQ.caGQG6q-GD94488ID9sZQPmUSon4AF6BcD59iZv-jKE",
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW5AZW1haWwuY29tIiwicGFzc3dvcmQiOiJhZG1pbjEyMyEiLCJpZCI6MjEsImlhdCI6MTY2ODIxMjY1NH0.YgXGdePQQnBx30frXsmRnBQtxiU6T2OzGXoCdrP18f8",
+  "name": "admin@email.com",
+  "userId": 21
+}

@@ -1,602 +1,535 @@
-POST http://localhost:6000/signup
+GET http://localhost:5000/playlists/users/13
+
+<> 2023-01-11T194010.200.json
+
+###
+
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Maasarek",
-  "password": "aarsek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 1
 }
 
-<> 2022-11-05T025822.201.txt
+<> 2023-01-11T052558.200.json
 
 ###
 
-POST http://localhost:6000/signup
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Maaaarek",
-  "password": "aarsek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 1
 }
 
-<> 2022-11-05T025815.403.txt
+<> 2023-01-11T052450.200.json
 
 ###
 
-POST http://localhost:6000/signup
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Maaaarek",
-  "password": "aarek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 1
 }
 
-<> 2022-11-05T025809.403.txt
+<> 2023-01-11T052439.200.json
 
 ###
 
-POST http://localhost:6000/token
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2Njc0MjE2MDV9.IBZMtOwPm_szTiDRErq1HSD7cLRR6-3AZtAWwYqIhkU"
+  "likedPlaylistId": 1
 }
 
-<> 2022-11-05T025805.403.txt
+<> 2023-01-11T052338.200.json
 
 ###
 
-POST http://localhost:6000/login
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Admin",
-  "password": "admin"
+  "likedPlaylistId": 1
 }
 
-<> 2022-11-05T025804.200.json
+<> 2023-01-11T052136.200.json
 
 ###
 
-POST http://localhost:6000/token
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2Njc0MjE2MDV9.IBZMtOwPm_szTiDRErq1HSD7cLRR6-3AZtAWwYqIhkU"
+  "likedPlaylistId": 1
 }
 
-<> 2022-11-05T025801.403.txt
+<> 2023-01-11T051014.200.json
 
 ###
 
-DELETE http://localhost:6000/logout
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2NjcwODA5OTB9.c3x1ow5-uk6rg25fKde1-PEQSGIy6LHXiYcGwY6JEVM"
+  "likedPlaylistId": 1
 }
+
+<> 2023-01-11T050820.200.json
 
 ###
 
-DELETE http://localhost:6000/logout
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2NjcwODA5OTB9.c3x1ow5-uk6rg25fKde1-PEQSGIy6LHXiYcGwY6JEVM"
+  "likedPlaylistId": 1
 }
 
-###
-
-GET http://localhost:5000/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJpYXQiOjE2Njc1MTU0MTUsImV4cCI6MTY2NzUxNjYxNX0.NU2xIq8u-UAmz11SAYxdc5q3oEFMUwLLgl0imVj5BNA
-
-<> 2022-11-05T025753.403.txt
+<> 2023-01-11T050738.200.json
 
 ###
 
-GET http://localhost:5000/songs
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJwYXNzd29yZCI6ImFkbWluIiwiaWQiOjEsImlhdCI6MTY2NzYwOTczNCwiZXhwIjoxNjY3NjEwOTM0fQ.R9xW_VPS5rFR78AJnG4lsLEcVml07kReOt9zeI4txZY
-
-<> 2022-11-05T025747.403.txt
-
-###
-
-POST http://localhost:6000/signup
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Maaaarek",
-  "password": "aarek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 1
 }
 
-<> 2022-11-05T025708.403.txt
+<> 2023-01-11T050513.200.json
 
 ###
 
-POST http://localhost:6000/signup
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Maaaarek",
-  "password": "aarek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 1
 }
 
-<> 2022-11-05T025546.403.txt
+<> 2023-01-11T050414.200.json
 
 ###
 
-POST http://localhost:6000/signup
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Maaaarek",
-  "password": "arek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 1
 }
 
-<> 2022-11-05T025247.201.txt
+<> 2023-01-11T050332.200.json
 
 ###
 
-POST http://localhost:6000/signup
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Maaarek",
-  "password": "arek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 1
 }
 
-<> 2022-11-05T025239.403.txt
+<> 2023-01-11T045906.200.json
 
 ###
 
-POST http://localhost:6000/login
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Admin",
-  "password": "admin"
+  "likedPlaylistId": 1
 }
 
-<> 2022-11-05T025229.200.json
+<> 2023-01-11T045700.200.json
 
 ###
 
-POST http://localhost:6000/login
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Admin",
-  "password": "admin"
+  "likedPlaylistId": 1
 }
 
-<> 2022-11-05T024959.200.json
+<> 2023-01-11T045553.200.json
 
 ###
 
-POST http://localhost:6000/login
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Admin",
-  "password": "admin"
+  "likedPlaylistId": 1
 }
 
-<> 2022-11-05T024953.200.json
+<> 2023-01-11T045543.200.json
 
 ###
 
-POST http://localhost:6000/signup
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Maaarek",
-  "password": "arek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 1
 }
 
-<> 2022-11-05T024725.201.txt
+<> 2023-01-11T045529.200.json
 
 ###
 
-POST http://localhost:6000/signup
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Maarek",
-  "password": "arek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 1
 }
 
-<> 2022-11-05T024720.403.txt
+<> 2023-01-11T045517.200.json
 
 ###
 
-POST http://localhost:6000/signup
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Maarek",
-  "password": "arek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 1
 }
 
-<> 2022-11-05T024659.201.txt
+<> 2023-01-11T045508.200.json
 
 ###
 
-POST http://localhost:6000/signup
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Marek",
-  "password": "arek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 1
 }
 
-<> 2022-11-05T024515.403.txt
+<> 2023-01-11T045457.200.json
 
 ###
 
-POST http://localhost:6000/signup
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Marek",
-  "password": "arek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 1
 }
 
-<> 2022-11-05T024039.201.txt
+<> 2023-01-11T045149.200.json
 
 ###
 
-POST http://localhost:6000/login
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Admin",
-  "password": "admin"
+  "likedPlaylistId": 1
 }
 
-<> 2022-11-05T024029.200.json
+<> 2023-01-11T044955.200.json
 
 ###
 
-POST http://localhost:6000/signup
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Arek",
-  "password": "arek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 1
 }
 
-<> 2022-11-05T024025.403.txt
+<> 2023-01-11T044907.200.json
 
 ###
 
-POST http://localhost:6000/signup
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Arek",
-  "password": "arek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 1
 }
 
-<> 2022-11-05T024017.403.txt
+<> 2023-01-11T044754.200.json
 
 ###
 
-POST http://localhost:6000/signup
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Arek",
-  "password": "arek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 1
 }
 
-<> 2022-11-05T023902.404.txt
+<> 2023-01-11T044737.200.json
 
 ###
 
-POST http://localhost:6000/signup
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Arek",
-  "password": "arek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 2
 }
 
-<> 2022-11-05T023521.201.txt
+<> 2023-01-11T044711.200.json
 
 ###
 
-POST http://localhost:6000/signup
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Arek",
-  "password": "arek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 2
 }
 
-<> 2022-11-05T023124.201.txt
+<> 2023-01-11T044643.200.json
 
 ###
 
-POST http://localhost:6000/login
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Admin",
-  "password": "admin"
+  "likedPlaylistId": 2
 }
 
-<> 2022-11-05T023116.200.json
+<> 2023-01-11T044529.200.json
 
 ###
 
-POST http://localhost:6000/signup
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Arek",
-  "password": "arek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 2
 }
 
-<> 2022-11-05T022716.201.txt
+<> 2023-01-11T044135.200.json
 
 ###
 
-POST http://localhost:6000/signup
+GET http://localhost:5000/playlists/1
+
+<> 2023-01-11T043707.401.txt
+
+###
+
+GET http://localhost:5000/playlists/1
+
+<> 2023-01-11T041543.200.json
+
+###
+
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Arek",
-  "password": "arek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 2
 }
 
-<> 2022-11-05T022646.201.txt
+<> 2023-01-11T035121.200.json
 
 ###
 
-POST http://localhost:6000/signup
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Arek",
-  "password": "arek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 2
 }
 
-<> 2022-11-05T022552.201.txt
+<> 2023-01-11T034928.200.json
 
 ###
 
-POST http://localhost:6000/signup
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Arek",
-  "password": "arek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 2
 }
 
-<> 2022-11-05T022312.201.txt
+<> 2023-01-11T034916.200.json
 
 ###
 
-POST http://localhost:6000/signup
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Arek",
-  "password": "arek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 2
 }
 
-<> 2022-11-05T021507.201.txt
+<> 2023-01-11T034909.200.json
 
 ###
 
-POST http://localhost:6000/signup
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Arek",
-  "password": "arek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 2
 }
 
-<> 2022-11-05T021433.201.txt
+<> 2023-01-11T034732.200.json
 
 ###
 
-POST http://localhost:6000/signup
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Arek",
-  "password": "arek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 2
 }
 
-<> 2022-11-05T021354.201.txt
+<> 2023-01-11T034238.200.json
 
 ###
 
-POST http://localhost:6000/signup
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Arek",
-  "password": "arek123!",
-  "name": "Arek Arkowski"
+  "likedPlaylistId": 2
 }
 
-<> 2022-11-05T021116.201.txt
+<> 2023-01-11T034224.200.json
 
 ###
 
-GET http://localhost:5000/songs
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQWRtaW4iLCJwYXNzd29yZCI6ImFkbWluIiwiaWQiOjEsImlhdCI6MTY2NzYwOTczNCwiZXhwIjoxNjY3NjEwOTM0fQ.R9xW_VPS5rFR78AJnG4lsLEcVml07kReOt9zeI4txZY
-
-<> 2022-11-05T015558.200.json
-
-###
-
-POST http://localhost:6000/login
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Admin",
-  "password": "admin"
+  "likedPlaylistId": 2
 }
 
-<> 2022-11-05T015534.200.json
+<> 2023-01-11T033939.200.json
 
 ###
 
-POST http://localhost:6000/signup
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Admin",
-  "password": "admin"
+  "likedPlaylistId": 2
 }
 
-<> 2022-11-05T015522.201.txt
+<> 2023-01-11T033922.200.json
 
 ###
 
-POST http://localhost:6000/login
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Admin",
-  "password": "admin"
+  "likedPlaylistId": 2
 }
 
-<> 2022-11-05T015247.200.json
+<> 2023-01-11T033903.200.json
 
 ###
 
-POST http://localhost:6000/login
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Admin",
-  "password": "admin"
+  "likedPlaylistId": 2
 }
 
-<> 2022-11-05T015226.200.json
+<> 2023-01-11T033844.200.json
 
 ###
 
-POST http://localhost:6000/login
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Admin",
-  "password": "admin"
+  "likedPlaylistId": 2
 }
 
-<> 2022-11-05T015107.403.txt
+<> 2023-01-11T033442.200.json
 
 ###
 
-POST http://localhost:6000/login
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "username": "Admin",
-  "password": "admin"
+  "likedPlaylistId": 2
 }
 
-<> 2022-11-05T014747.403.txt
+<> 2023-01-11T033043.200.json
 
 ###
 
-POST http://localhost:6000/login
+GET http://localhost:5000/playlists
 Content-Type: application/json
 
 {
-  "username": "Admin",
-  "password": "admin"
+  "likedPlaylistId": 2
 }
 
-<> 2022-11-05T014710.403.txt
+<> 2023-01-11T033026.404.html
 
 ###
 
-POST http://localhost:6000/login
+GET http://localhost:5000/playli
 Content-Type: application/json
 
 {
-  "username": "Admin",
-  "password": "admin"
+  "likedPlaylistId": 2
 }
 
-<> 2022-11-05T014420.403.txt
+<> 2023-01-11T032938.404.html
 
 ###
 
-POST http://localhost:6000/login
+GET http://localhost:5000/playlists/redededededede
 Content-Type: application/json
 
 {
-  "username": "Admin",
-  "password": "admin"
+  "likedPlaylistId": 2
 }
 
-<> 2022-11-05T014344.403.txt
+<> 2023-01-11T032921.401.txt
 
 ###
 
-POST http://localhost:6000/login
+GET http://localhost:5000/playlists/re
 Content-Type: application/json
 
 {
-  "username": "Admin",
-  "password": "admin"
+  "likedPlaylistId": 2
 }
 
-<> 2022-11-05T014318.403.txt
+<> 2023-01-11T032841.401.txt
 
 ###
 
-POST http://localhost:6000/login
+GET http://localhost:5010/playlists/re
 Content-Type: application/json
 
 {
-  "username": "Admin",
-  "password": "admin"
+  "likedPlaylistId": 2
 }
 
-<> 2022-11-05T014235.403.txt
+<> 2023-01-11T032831.404.html
 
 ###
 
-POST http://localhost:6000/login
+GET http://localhost:5010/playlists/re
 Content-Type: application/json
 
 {
-  "username": "Admin",
-  "password": "admin"
+  "likedPlaylistId": 2
 }
 
-<> 2022-11-05T014152.403.txt
+<> 2023-01-11T032743.404.html
 
 ###
 
