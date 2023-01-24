@@ -1,9 +1,3 @@
-GET http://localhost:5000/playlists/users/13
-
-<> 2023-01-11T194010.200.json
-
-###
-
 GET http://localhost:5000/recommended
 Content-Type: application/json
 
@@ -11,7 +5,7 @@ Content-Type: application/json
   "likedPlaylistId": 1
 }
 
-<> 2023-01-11T052558.200.json
+<> 2023-01-24T222039.200.json
 
 ###
 
@@ -19,252 +13,10 @@ GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "likedPlaylistId": 1
+  "likedPlaylistId": 3
 }
 
-<> 2023-01-11T052450.200.json
-
-###
-
-GET http://localhost:5000/recommended
-Content-Type: application/json
-
-{
-  "likedPlaylistId": 1
-}
-
-<> 2023-01-11T052439.200.json
-
-###
-
-GET http://localhost:5000/recommended
-Content-Type: application/json
-
-{
-  "likedPlaylistId": 1
-}
-
-<> 2023-01-11T052338.200.json
-
-###
-
-GET http://localhost:5000/recommended
-Content-Type: application/json
-
-{
-  "likedPlaylistId": 1
-}
-
-<> 2023-01-11T052136.200.json
-
-###
-
-GET http://localhost:5000/recommended
-Content-Type: application/json
-
-{
-  "likedPlaylistId": 1
-}
-
-<> 2023-01-11T051014.200.json
-
-###
-
-GET http://localhost:5000/recommended
-Content-Type: application/json
-
-{
-  "likedPlaylistId": 1
-}
-
-<> 2023-01-11T050820.200.json
-
-###
-
-GET http://localhost:5000/recommended
-Content-Type: application/json
-
-{
-  "likedPlaylistId": 1
-}
-
-<> 2023-01-11T050738.200.json
-
-###
-
-GET http://localhost:5000/recommended
-Content-Type: application/json
-
-{
-  "likedPlaylistId": 1
-}
-
-<> 2023-01-11T050513.200.json
-
-###
-
-GET http://localhost:5000/recommended
-Content-Type: application/json
-
-{
-  "likedPlaylistId": 1
-}
-
-<> 2023-01-11T050414.200.json
-
-###
-
-GET http://localhost:5000/recommended
-Content-Type: application/json
-
-{
-  "likedPlaylistId": 1
-}
-
-<> 2023-01-11T050332.200.json
-
-###
-
-GET http://localhost:5000/recommended
-Content-Type: application/json
-
-{
-  "likedPlaylistId": 1
-}
-
-<> 2023-01-11T045906.200.json
-
-###
-
-GET http://localhost:5000/recommended
-Content-Type: application/json
-
-{
-  "likedPlaylistId": 1
-}
-
-<> 2023-01-11T045700.200.json
-
-###
-
-GET http://localhost:5000/recommended
-Content-Type: application/json
-
-{
-  "likedPlaylistId": 1
-}
-
-<> 2023-01-11T045553.200.json
-
-###
-
-GET http://localhost:5000/recommended
-Content-Type: application/json
-
-{
-  "likedPlaylistId": 1
-}
-
-<> 2023-01-11T045543.200.json
-
-###
-
-GET http://localhost:5000/recommended
-Content-Type: application/json
-
-{
-  "likedPlaylistId": 1
-}
-
-<> 2023-01-11T045529.200.json
-
-###
-
-GET http://localhost:5000/recommended
-Content-Type: application/json
-
-{
-  "likedPlaylistId": 1
-}
-
-<> 2023-01-11T045517.200.json
-
-###
-
-GET http://localhost:5000/recommended
-Content-Type: application/json
-
-{
-  "likedPlaylistId": 1
-}
-
-<> 2023-01-11T045508.200.json
-
-###
-
-GET http://localhost:5000/recommended
-Content-Type: application/json
-
-{
-  "likedPlaylistId": 1
-}
-
-<> 2023-01-11T045457.200.json
-
-###
-
-GET http://localhost:5000/recommended
-Content-Type: application/json
-
-{
-  "likedPlaylistId": 1
-}
-
-<> 2023-01-11T045149.200.json
-
-###
-
-GET http://localhost:5000/recommended
-Content-Type: application/json
-
-{
-  "likedPlaylistId": 1
-}
-
-<> 2023-01-11T044955.200.json
-
-###
-
-GET http://localhost:5000/recommended
-Content-Type: application/json
-
-{
-  "likedPlaylistId": 1
-}
-
-<> 2023-01-11T044907.200.json
-
-###
-
-GET http://localhost:5000/recommended
-Content-Type: application/json
-
-{
-  "likedPlaylistId": 1
-}
-
-<> 2023-01-11T044754.200.json
-
-###
-
-GET http://localhost:5000/recommended
-Content-Type: application/json
-
-{
-  "likedPlaylistId": 1
-}
-
-<> 2023-01-11T044737.200.json
+<> 2023-01-24T222032.200.json
 
 ###
 
@@ -275,7 +27,7 @@ Content-Type: application/json
   "likedPlaylistId": 2
 }
 
-<> 2023-01-11T044711.200.json
+<> 2023-01-24T222028.200.json
 
 ###
 
@@ -283,10 +35,10 @@ GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "likedPlaylistId": 2
+  "likedPlaylistId": 1
 }
 
-<> 2023-01-11T044643.200.json
+<> 2023-01-24T222021.200.json
 
 ###
 
@@ -294,10 +46,10 @@ GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "likedPlaylistId": 2
+  "likedPlaylistId": 1
 }
 
-<> 2023-01-11T044529.200.json
+<> 2023-01-24T222005.200.json
 
 ###
 
@@ -305,22 +57,10 @@ GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "likedPlaylistId": 2
+  "likedPlaylistId": 1
 }
 
-<> 2023-01-11T044135.200.json
-
-###
-
-GET http://localhost:5000/playlists/1
-
-<> 2023-01-11T043707.401.txt
-
-###
-
-GET http://localhost:5000/playlists/1
-
-<> 2023-01-11T041543.200.json
+<> 2023-01-24T221958.200.json
 
 ###
 
@@ -328,10 +68,10 @@ GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "likedPlaylistId": 2
+  "likedPlaylistId": 1
 }
 
-<> 2023-01-11T035121.200.json
+<> 2023-01-24T221853.200.json
 
 ###
 
@@ -339,10 +79,10 @@ GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "likedPlaylistId": 2
+  "likedPlaylistId": 1
 }
 
-<> 2023-01-11T034928.200.json
+<> 2023-01-24T221844.200.json
 
 ###
 
@@ -350,10 +90,10 @@ GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "likedPlaylistId": 2
+  "likedPlaylistId": 1
 }
 
-<> 2023-01-11T034916.200.json
+<> 2023-01-24T221830.200.json
 
 ###
 
@@ -361,10 +101,10 @@ GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "likedPlaylistId": 2
+  "likedPlaylistId": 1
 }
 
-<> 2023-01-11T034909.200.json
+<> 2023-01-24T221814.200.json
 
 ###
 
@@ -372,10 +112,10 @@ GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "likedPlaylistId": 2
+  "likedPlaylistId": 1
 }
 
-<> 2023-01-11T034732.200.json
+<> 2023-01-24T221640.200.json
 
 ###
 
@@ -383,10 +123,10 @@ GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "likedPlaylistId": 2
+  "likedPlaylistId": 1
 }
 
-<> 2023-01-11T034238.200.json
+<> 2023-01-24T221618.200.json
 
 ###
 
@@ -394,10 +134,10 @@ GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "likedPlaylistId": 2
+  "likedPlaylistId": 1
 }
 
-<> 2023-01-11T034224.200.json
+<> 2023-01-24T221555.200.json
 
 ###
 
@@ -405,10 +145,10 @@ GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "likedPlaylistId": 2
+  "likedPlaylistId": 1
 }
 
-<> 2023-01-11T033939.200.json
+<> 2023-01-24T221512.200.json
 
 ###
 
@@ -416,10 +156,10 @@ GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "likedPlaylistId": 2
+  "likedPlaylistId": 1
 }
 
-<> 2023-01-11T033922.200.json
+<> 2023-01-24T221449.200.json
 
 ###
 
@@ -427,10 +167,10 @@ GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "likedPlaylistId": 2
+  "likedPlaylistId": 1
 }
 
-<> 2023-01-11T033903.200.json
+<> 2023-01-24T221440.200.json
 
 ###
 
@@ -438,10 +178,10 @@ GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "likedPlaylistId": 2
+  "likedPlaylistId": 1
 }
 
-<> 2023-01-11T033844.200.json
+<> 2023-01-24T221435.200.json
 
 ###
 
@@ -449,10 +189,10 @@ GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "likedPlaylistId": 2
+  "likedPlaylistId": 1
 }
 
-<> 2023-01-11T033442.200.json
+<> 2023-01-24T221422.200.json
 
 ###
 
@@ -460,76 +200,351 @@ GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "likedPlaylistId": 2
+  "likedPlaylistId": 1
 }
 
-<> 2023-01-11T033043.200.json
+<> 2023-01-24T221217.200.json
 
 ###
 
-GET http://localhost:5000/playlists
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "likedPlaylistId": 2
+  "likedPlaylistId": 1
 }
 
-<> 2023-01-11T033026.404.html
+<> 2023-01-24T221212.200.json
 
 ###
 
-GET http://localhost:5000/playli
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "likedPlaylistId": 2
+  "likedPlaylistId": 1
 }
 
-<> 2023-01-11T032938.404.html
+<> 2023-01-24T221006.200.json
 
 ###
 
-GET http://localhost:5000/playlists/redededededede
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "likedPlaylistId": 2
+  "likedPlaylistId": 1
 }
 
-<> 2023-01-11T032921.401.txt
+<> 2023-01-24T220959.200.json
 
 ###
 
-GET http://localhost:5000/playlists/re
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "likedPlaylistId": 2
+  "likedPlaylistId": 1
 }
 
-<> 2023-01-11T032841.401.txt
+<> 2023-01-24T220949.200.json
 
 ###
 
-GET http://localhost:5010/playlists/re
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "likedPlaylistId": 2
+  "likedPlaylistId": 1
 }
 
-<> 2023-01-11T032831.404.html
+<> 2023-01-24T220620.200.json
 
 ###
 
-GET http://localhost:5010/playlists/re
+GET http://localhost:5000/recommended
 Content-Type: application/json
 
 {
-  "likedPlaylistId": 2
+  "likedPlaylistId": 1
 }
 
-<> 2023-01-11T032743.404.html
+<> 2023-01-24T220514.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T220401.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T220235.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T220231.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T220048.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T215811.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T215809.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T215808-1.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T215808.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T215807.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T215731.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T215643.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T215623.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T215506.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T215428.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T215344.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T215127.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T214959.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T214933.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T214921.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T214911.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T214848.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T214749.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T214739.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T214657.200.json
+
+###
+
+GET http://localhost:5000/recommended
+Content-Type: application/json
+
+{
+  "likedPlaylistId": 1
+}
+
+<> 2023-01-24T214609.200.json
 
 ###
 

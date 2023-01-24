@@ -13,7 +13,6 @@ const {getAllSongsInfo, getSongUrl, getSongInfo, getPosterPath, getUserPlaylists
     postPlaylistToDatabase, postSongToPlaylist, deletePlaylistFromDatabase, deleteSongFromPlaylist,
     updateActualPlayedSong, getSongIdListenedByUser, postNewUserData, getAllSongsKeywords, getMaxSongId
 } = require('./query');
-const {max} = require('pg/lib/defaults');
 
 app.use(express.json());
 
@@ -289,17 +288,22 @@ app.get('/recommended', async (req, res) => {
     let recommendedSongs = [];
 
     for(let i = 0; i < 50; i++){
-        const randomSongId = Math.floor(Math.random() * maxId);
-        const songKeywordsId = allSongsKeyword.filter(song => song.songId = randomSongId).map(({ keywordId }) => keywordId);
+        const randomSongId = Math.floor(Math.random() * maxId + 1);
+        const songKeywordsId = allSongsKeyword
+            .filter(song => song.songId === randomSongId)
+            .map(({ keywordId }) => keywordId);
         if (songKeywordsId.some(k => mostPopularKeywordsIds.includes(k))) {
             recommendedSongs = [...recommendedSongs, randomSongId];
         }
     }
 
-    const uniqueRecommendedSongs = recommendedSongs.filter((element, index) => recommendedSongs.indexOf(element) === index);
+    const uniqueRecommendedSongs = [...new Set(recommendedSongs)];
+
+    const newSongs = uniqueRecommendedSongs.filter(songId => !likedSongsIds.includes(songId));
+
 
     res.json({
-         recommendedSongs: uniqueRecommendedSongs
+         recommendedSongs: newSongs,
     });
 });
 
@@ -323,7 +327,7 @@ function authenticateToken(req, res, next) {
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];
 
-    if (token == null) res.sendStatus(401);
+    if (token == null) return res.sendStatus(401);
 
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
         if (err) return res.sendStatus(403);
