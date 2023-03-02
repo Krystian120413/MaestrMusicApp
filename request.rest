@@ -46,8 +46,8 @@ DELETE http://localhost:5000/playlist/song
 Content-Type: application/json
 
 {
-  "playlistId": 2,
-  "songId": 2
+  "playlistId": 1,
+  "songId": 7
 }
 
 ### songs-in-playlist
@@ -109,13 +109,14 @@ Content-Type: application/json
 
 ### recommended-songs
 
-GET http://localhost:5000/recommended
-Content-Type: application/json
+GET http://localhost:5000/recommended/21
 
-{
-  "likedPlaylistId": 1
-}
+### radio-generate-token
 
-### radio-listened-song-id
+POST http://localhost:5000/radio/1
 
-GET http://localhost:5000/radio/2
+### radio-get-song-id-from-token
+GET http://localhost:5000/radio/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiaWF0IjoxNjc1OTg1NjAzLCJleHAiOjE2NzU5ODg2MDN9.I_2dttc39nuhEn54wRe5DOfeRrmRC7KBMsBM1ZlbBgo
+
+### radio-delete-token
+DELETE http://localhost:5000/radio/1

@@ -23,6 +23,8 @@ app.post('/signup', async (req, res) => {
     }
 
     const isUserSaved = await db.postUserToDatabase(body.username, body.password, body.name);
+    const userId = await db.getUserIdAndName(body.username, body.password);
+    await db.postPlaylistToDatabase('liked', userId.userId);
     if (isUserSaved){
         res.sendStatus(201);
     }
@@ -39,7 +41,7 @@ app.post('/login',  async (req, res) => {
     const idAndName = await db.getUserIdAndName(username, password);
 
     if(idAndName) {
-        const user = {name: username, password: password, idAndName: idAndName};
+        const user = {name: username, idAndName: idAndName};
 
         const accessToken = generateAccessToken(user);
         const refreshToken = jwt.sign(user, process.env.REFRESH_TOKEN_SECRET);
@@ -73,7 +75,7 @@ app.delete('/logout', async (req, res) => {
 });
 
 function generateAccessToken(user) {
-    return  jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '20m' });
+    return  jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '50m' });
 }
 
 app.listen(5010, () => {

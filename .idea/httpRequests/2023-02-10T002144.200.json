@@ -1,0 +1,21 @@
+{
+  "songUrl": [
+    {
+      "path": "alexander-nakarada-banjo-fever.mp3"
+    }
+  ],
+  "songInfo": [
+    {
+      "title": "Banjo Fever",
+      "author": "Alexander Nakarada",
+      "duration": 151,
+      "name": "comedy"
+    },
+    {
+      "title": "Banjo Fever",
+      "author": "Alexander Nakarada",
+      "duration": 151,
+      "name": "folk"
+    }
+  ]
+}

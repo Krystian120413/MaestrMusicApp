@@ -14,6 +14,11 @@ const {getAllSongsInfo, getSongUrl, getSongInfo, getPosterPath, getUserPlaylists
     updateActualPlayedSong, getSongIdListenedByUser, postNewUserData, getAllSongsKeywords, getMaxSongId
 } = require('./query');
 
+const posters = 'assets/posters/';
+const songs = 'assets/songs/';
+
+let sharedTokensIds = [];
+
 app.use(express.json());
 
 app.get('/', (req, res) => {
@@ -78,33 +83,38 @@ app.get('/songs/:songId/:userId', async (req, res) => {
         return res.sendStatus(404);
     }
 
-    const isSongUpdated = updateActualPlayedSong(songId, userId);
+    const isSongUpdated = await updateActualPlayedSong(songId, userId);
     if(!isSongUpdated) {
-        res.sendStatus(403);
+        return res.sendStatus(403);
     }
 
-    const songPath = songUrl[0].path;
-    const songSize = fs.statSync(songPath).size;
+    try {
+        const songPath = `${songs}${songUrl[0].path}`;
+        const songSize = fs.statSync(songPath).size;
 
-    const CHUNK_SIZE = 10 ** 6;  // 1MB
-    const start = Number(range.replace(/\D/g, ''));
-    const end = Math.min(start + CHUNK_SIZE, songSize - 1);
+        const CHUNK_SIZE = 10 ** 6;  // 1MB
+        const start = Number(range.replace(/\D/g, ''));
+        const end = Math.min(start + CHUNK_SIZE, songSize - 1);
 
-    const contentLength = end - start + 1;
+        const contentLength = end - start + 1;
 
-    const headers = {
-        'Content-Range': `bytes ${start}-${end}/${songSize}`,
-        'Accept-Ranges': 'bytes',   
-        'Content-Length': contentLength,
-        'Content-Type': 'audio/mpeg',
-    };
+        const headers = {
+            'Content-Range': `bytes ${start}-${end}/${songSize}`,
+            'Accept-Ranges': 'bytes',
+            'Content-Length': contentLength,
+            'Content-Type': 'audio/mpeg',
+        };
 
-    // HTTP Status 206 for Partial Content
-    res.writeHead(206, headers);
+        // HTTP Status 206 for Partial Content
+        res.writeHead(206, headers);
 
-    const songStream = fs.createReadStream(songPath, { start, end });
+        const songStream = fs.createReadStream(songPath, {start, end});
 
-    songStream.pipe(res);
+        songStream.pipe(res);
+    } catch (error) {
+        console.log(error);
+        res.sendStatus(404);
+    }
 });
 
 app.get('/songs-info/:songInfoId', authenticateToken, async (req, res) => {
@@ -141,7 +151,7 @@ app.get('/songs-info/posters/:posterId', authenticateToken, async (req, res) => 
         }
     };
 
-    res.sendFile(posterPath[0].posterPath, options, (error) => {
+    res.sendFile(`${posters}${posterPath[0].posterPath}`, options, (error) => {
         if(error) {
             res.send(error.status);
         }
@@ -155,10 +165,13 @@ app.get('/playlists/users/:userId', authenticateToken, async (req, res) => {
 
     const playlists = await getUserPlaylists(userId);
 
-    res.json(playlists.map(({ name, playlistId }) => ({ name, playlistId })));
+    res.json({
+        playlists: playlists.filter(({name}) => name !== 'liked').map(({name, playlistId}) => ({name, playlistId})),
+        liked: playlists.filter(({name}) => name === 'liked')[0].playlistId
+    });
 });
 
-app.get('/playlists/:playlistId', authenticateToken, async (req, res) => {
+app.get('/playlists/:playlistId', async (req, res) => {
 
     const playlistId = req.params.playlistId;
 
@@ -178,7 +191,7 @@ app.get('/playlists/:playlistId', authenticateToken, async (req, res) => {
             author: author,
             duration: duration,
             path: path,
-            posterPath: posterPath
+            posterPath: `${posters}${posterPath}`
         })),
     });
 });
@@ -218,7 +231,7 @@ app.delete('/playlists/:playlistId', authenticateToken, (req, res) => {
     }
 });
 
-app.post('/playlist/song', authenticateToken, (req, res) => {
+app.post('/playlist/song', authenticateToken, async (req, res) => {
     const songId = req.body.songId;
     const playlistId = req.body.playlistId;
 
@@ -226,7 +239,10 @@ app.post('/playlist/song', authenticateToken, (req, res) => {
         return res.sendStatus(400);
     }
 
-    const isSongAddedToPlaylist = postSongToPlaylist(songId, playlistId);
+    const isSongAddedToPlaylist = await postSongToPlaylist(songId, playlistId).catch(error => {
+        console.log(error);
+        res.sendStatus(404);
+    });
 
     if (isSongAddedToPlaylist) {
         res.sendStatus(201);
@@ -236,7 +252,7 @@ app.post('/playlist/song', authenticateToken, (req, res) => {
     }
 });
 
-app.delete('/playlist/song', authenticateToken, (req, res) => {
+app.delete('/playlist/song', authenticateToken, async  (req, res) => {
     const songId = req.body.songId;
     const playlistId = req.body.playlistId;
 
@@ -244,7 +260,10 @@ app.delete('/playlist/song', authenticateToken, (req, res) => {
         return res.sendStatus(400);
     }
 
-    const isSongDeletedFromPlaylist = deleteSongFromPlaylist(songId, playlistId);
+    const isSongDeletedFromPlaylist = await deleteSongFromPlaylist(songId, playlistId).catch(error => {
+        console.log(error);
+        res.sendStatus(404);
+    });
 
     if (isSongDeletedFromPlaylist) {
         res.sendStatus(201);
@@ -254,19 +273,38 @@ app.delete('/playlist/song', authenticateToken, (req, res) => {
     }
 });
 
-app.get('/recommended', async (req, res) => {
-    const likedPlaylistId = req.body.likedPlaylistId;
+app.get('/recommended/:userId', authenticateToken, async (req, res) => {
+    const userId = req.params.userId;
+
+    if(isNaN(userId)) {
+        return res.sendStatus(404);
+    }
+
+    const userPlaylists = await getUserPlaylists(userId);
+
+    if(!userPlaylists) {
+        return res.sendStatus(404);
+    }
+
+    const likedPlaylistId = userPlaylists.filter(({ name }) => (name === 'liked'))[0].playlistId;
+
+    if (!likedPlaylistId) {
+        return res.sendStatus(404);
+    }
 
     const likedSongs = await getSongsInPlaylist(likedPlaylistId);
 
-    if (likedSongs.length < 0) {
-        res.sendStatus(403);
+    if (!likedSongs) {
+        return res.sendStatus(404);
+    }
+    if(likedSongs.length < 0) {
+        return res.sendStatus(404);
     }
 
     const allSongsKeyword = await getAllSongsKeywords();
 
     if (allSongsKeyword.length < 0) {
-        res.sendStatus(403);
+        return res.sendStatus(404);
     }
 
     const likedSongsIds = likedSongs.map(({ songId }) => songId);
@@ -301,25 +339,63 @@ app.get('/recommended', async (req, res) => {
 
     const newSongs = uniqueRecommendedSongs.filter(songId => !likedSongsIds.includes(songId));
 
+    if(!newSongs) {
+        return res.sendStatus(404);
+    }
 
-    res.json({
-         recommendedSongs: newSongs,
+    const newSongsInfoPromises = newSongs.map(songId => getSongInfo(songId));
+
+    const newSongsInfo = (await Promise.all(newSongsInfoPromises)).flat(2);
+
+    const newSongsInfoSet = new Set;
+    const uniqueNewSongsInfo = newSongsInfo.filter(songInfo => {
+        const duplicate = newSongsInfoSet.has(songInfo.title);
+        newSongsInfoSet.add(songInfo.title);
+        return !duplicate;
     });
+
+    res.json(uniqueNewSongsInfo.map(({ title, author,duration }, index) => ({title, author, duration, songId: newSongs[index]})));
 });
 
-app.get('/radio/:userId', authenticateToken, async (req, res) => {
+app.post('/radio/:userId', authenticateToken, async (req, res) => {
     const userId = req.params.userId;
 
     if(isNaN(userId) || userId < 0) {
-        res.sendStatus(400);
+        return res.sendStatus(400);
     }
 
-    const radioSongId = await getSongIdListenedByUser(userId);
+    const user = {userId: userId};
 
-    if(typeof radioSongId === 'undefined') return res.sendStatus(404);
+    const shareToken = jwt.sign(user, process.env.SHARE_TOKEN_SECRET, { expiresIn: '50m' });
+    sharedTokensIds.push(userId);
+    res.json({ shareToken: shareToken });
+});
 
-    res.json({
-        songId: radioSongId
+app.delete('/radio/:userId', authenticateToken, async (req, res) => {
+    sharedTokensIds = sharedTokensIds.filter(id => id !== req.params.userId);
+    res.sendStatus(204);
+});
+
+app.get('/radio/:token', authenticateToken, (req, res) => {
+    const token = req.params.token;
+
+    if(!token) {
+        return res.sendStatus(400);
+    }
+
+    jwt.verify(token, process.env.SHARE_TOKEN_SECRET, async (err, user) => {
+        if (err) return res.sendStatus(403);
+
+        if(sharedTokensIds.includes(user.userId)){
+            const radioSongId = await getSongIdListenedByUser(user.userId);
+
+            res.json({
+                songId: radioSongId,
+            });
+        } else {
+            res.sendStatus(404);
+        }
+
     });
 });
 

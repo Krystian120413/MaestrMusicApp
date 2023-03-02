@@ -10,7 +10,6 @@ const pool = new Pool({
 });
 
 const crypt = require('./crypt');
-const {errors} = require('pg-promise');
 
 const getPasswordAndCompare = (username, password) => {
     return new Promise(resolve => {
@@ -309,7 +308,7 @@ const postSongToPlaylist = async (songId, playlistId) => {
 
         pool.query('insert into public."Playlists-Songs"("playlistId", "songId") values ($1, $2)', [playlistId, songId], error => {
             if (error) {
-                throw error;
+                error;
             } else resolve(true);
         });
     });
