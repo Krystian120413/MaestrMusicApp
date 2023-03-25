@@ -92,7 +92,7 @@ app.get('/songs/:songId/:userId', async (req, res) => {
         const songPath = `${songs}${songUrl[0].path}`;
         const songSize = fs.statSync(songPath).size;
 
-        const CHUNK_SIZE = 10 ** 6;  // 1MB
+        const CHUNK_SIZE = 10 ** 6;
         const start = Number(range.replace(/\D/g, ''));
         const end = Math.min(start + CHUNK_SIZE, songSize - 1);
 
@@ -105,7 +105,6 @@ app.get('/songs/:songId/:userId', async (req, res) => {
             'Content-Type': 'audio/mpeg',
         };
 
-        // HTTP Status 206 for Partial Content
         res.writeHead(206, headers);
 
         const songStream = fs.createReadStream(songPath, {start, end});
@@ -395,7 +394,6 @@ app.get('/radio/:token', authenticateToken, (req, res) => {
         } else {
             res.sendStatus(404);
         }
-
     });
 });
 
