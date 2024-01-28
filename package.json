@@ -5,15 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "nodemon index.js",
+    "startAuth": "nodemon authServer.js"
   },
   "keywords": [],
   "author": "Krystian Zbyrad <Krystian12053@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
     "nodemon": "^2.0.16",
+    "pg": "^8.8.0",
+    "pg-promise": "^10.12.1",
     "prettier": "^2.7.1"
   },
   "repository": "git@github.com:Krystian120413/Maestr2-backend.git",
