@@ -1,1 +1,1 @@
-# This is a backend site of the Maestr music app
+# This is a backend side of the Maestr music app
