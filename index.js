@@ -385,6 +385,10 @@ app.get('/radio/:token', authenticateToken, (req, res) => {
     jwt.verify(token, process.env.SHARE_TOKEN_SECRET, async (err, user) => {
         if (err) return res.sendStatus(403);
 
+        if (user.userId === null) {
+            return res.sendStatus(404);
+        }
+
         if(sharedTokensIds.includes(user.userId)){
             const radioSongId = await getSongIdListenedByUser(user.userId);
 
